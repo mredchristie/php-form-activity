@@ -9,7 +9,6 @@
 <body>
 
 
-
 <?php 
 $servername = "localhost";
 $username = "root";
@@ -19,6 +18,14 @@ $dbname = "task5";
 
 
 <?php
+
+
+if ($conn->query($sql) === TRUE) {
+	echo "New record created successfully";
+	echo "<br>";
+  } else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname)
 				or die ('Sorry, cannot connect to MySQL');
@@ -32,9 +39,14 @@ $dbname = "task5";
 		
 	}
 
+
+
+
 ?>
 
 
-    
+
+
+
 </body>
 </html>
