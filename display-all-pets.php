@@ -8,18 +8,12 @@
 
 </head>
 <body>
-    
-
-
-
 
 <?php 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "task6";
-
-
 ?>
 
 <?php
@@ -43,8 +37,6 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -64,12 +56,6 @@ catch(PDOException $e) {
 $conn = null;
 echo "</table>";
 ?>
-
-
-
-
-
-
 
 </body>
 </html>
