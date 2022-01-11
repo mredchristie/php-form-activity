@@ -8,6 +8,8 @@
 </head>
 <body>
     <a href="add-a-pet-record.html">Add</a>
+    <a href="pet-search.html">Search</a>
+    
 
 <?php 
 $servername = "localhost";
