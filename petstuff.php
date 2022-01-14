@@ -41,7 +41,7 @@ $pet_type = $_POST['type'];
           }
 		
 	} else {
-		
+		 
 		echo 'Sorry, connection failed!';
 		
 	}
