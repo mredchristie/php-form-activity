@@ -8,23 +8,17 @@
 
 </head>
 <body>
-    
-
-
-
 
 <?php 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "task6";
-
-
 ?>
 
 <?php
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Pet Name</th><th>Pet Age</th><th>Pet Type</th></tr>";
+ echo "<tr><th>Pet_id</td><th>Pet Name</th><th>Pet Age</th><th>Pet Type</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -43,12 +37,10 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT pet_name, pet_age, pet_type FROM pets");
+    $stmt = $conn->prepare("SELECT pet_id, pet_name, pet_age, pet_type FROM pets");
     $stmt->execute();
 
     // set the resulting array to associative
@@ -64,12 +56,6 @@ catch(PDOException $e) {
 $conn = null;
 echo "</table>";
 ?>
-
-
-
-
-
-
 
 </body>
 </html>
